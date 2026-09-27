@@ -1,4 +1,4 @@
-#Welcome to my first assignment's program!
+print("Welcome to my first assignment's program!")
 #-------------------------------------------------------
 #Assignment 1
 #Written by Iris-Maria Palade (2540435)
@@ -10,8 +10,8 @@
 #This program uses the data entered by the user (power amount, time, and electrical rate) to calculate and return to the user the cost of electricity and classifies it by comparing it to a set cost.
 
 #In the following lines, the user is prompted to type in the data needed (the power used, the time it was used for and the electrical rate) using their keyboards.
-power = int(input("Enter the power in watts:"))
-time = int(input("Enter the number of hours:"))
+power = float(input("Enter the power in watts:"))
+time = float(input("Enter the number of hours:"))
 rate = float(input("Enter the electricity rate per kWh:")) 
 
 #In the lines below, a function is defined to calculate the cost of electrivity depending on the amount of power used in a period of time and the electricity rate.
@@ -21,12 +21,12 @@ def calculate_cost(power, time, rate):
 
 #Here, the variable "energy_cost" is defined and the result of the electrical cost is displayed to the user using the print function.
 energy_cost = calculate_cost(power, time, rate)
-print("Electricity cost:", calculate_cost(power, time, rate), "$")  
+print("Electricity cost: $", energy_cost)  
 
 # In the lines below, the if/elif/else function is used to classify the cost as low, moderate or high depending of it's ammount by comparing it to a set cost and it returns the classification to the user following the cost of electricity.
 if energy_cost < 1:
     print("Cost category: Low cost")
-elif energy_cost > 1 and energy_cost < 5:
+elif energy_cost >= 1 and energy_cost < 5:
     print("Cost category: Moderate cost")
 else:
     print("Cost category: High cost")
@@ -36,14 +36,14 @@ else:
 #This program uses the data entered by the user (lab, midterm and final exam grades) to calculate and return to the user their final grade in that class taking into account each section's ponderation and classifies it by comparing it to a set grade.
 
 #For the following lines, the user is prompted to type in the data needed (their grades) using their keyboards.
-lab_grade = int(input("Enter the lab grade:"))
-midterm_grade = int(input("Enter the midterm exam grade:"))
-final_exam_grade = int(input("Enter the final exam grade:")) 
+lab_grade = float(input("Enter the lab grade:"))
+midterm_grade = float(input("Enter the midterm exam grade:"))
+final_exam_grade = float(input("Enter the final exam grade:")) 
 
 
 #In the lines below, a functuion is defined to calculate the final grade of a student, taking into account the grades they have entered into the program as well as their respective ponderation.
-def calculate_grade(lab_grade, midterm_grade, final_grade):
-    final_grade = round((lab_grade * 0.30) + (midterm_grade * 0.30) + (final_grade * 0.40), 1)
+def calculate_grade(lab_grade, midterm_grade, final_exam_grade):
+    final_grade = round((lab_grade * 0.30) + (midterm_grade * 0.30) + (final_exam_grade * 0.40), 1)
     return final_grade
  
 
