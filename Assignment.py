@@ -21,7 +21,7 @@ def calculate_cost(power, time, rate):
 
 #Here, the variable "energy_cost" is defined and the result of the electrical cost is displayed to the user using the print function.
 energy_cost = calculate_cost(power, time, rate)
-print("Electricity cost: $"+energy_cost)  
+print("Electricity cost: $"+str(energy_cost)) 
 
 # In the lines below, the if/elif/else function is used to classify the cost as low, moderate or high depending of it's ammount by comparing it to a set cost and it returns the classification to the user following the cost of electricity.
 if energy_cost < 1:
